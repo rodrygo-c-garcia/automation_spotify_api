@@ -13,7 +13,7 @@ function fn() {
   var config = {
     env: env,
     baseUrl: "https://api.spotify.com/v1/",
-    token: 'BQD6EG1GiTijXsv2S_EhzJzfLctc0UwXva5Z7n_RNK_rSee6vbBVxUYI-xPyZdzU0cNM_MnMsBoPh0oyBbLVw-JVywAw0YDVI1-l2_uMngccT6d7NsF6ZUOchG-B6IiDMaoUEDVr-uXMf3a2oXzxOtfyZ8ML61fgExuqrWFGwhbfXPKnclaGlRMk96areOIE7Gq746T5jj24PIQ2g7TCbxNusbfOuItiSPare1vX9Gssdjrr1xkFFYAeA5Eu4fjHRF3JzmuIBpudrMcPESjALaeuoVURpaVVVZTLMxduaKYp3fBuSAipArmgJv-xoyIqu9t6gRjSXF6MaM9qSGeMBpCAnF3iqm61onIkB_p42SruPznsYLYM0NCF0I37',
+    token: 'BQDkE2TSMHtEqY-JrbGh6cWCOQ6DbJ-OlgsUne-Rz9kmQKoj167o3zwcD3ZXVkmJuhNeL2IRLAAZLZ_vVgKg85zYm5eDXShq9jDW5ZSZejvd8o1bMj5GBXbLpWFf-oIRzed9KKnNrcILYwKz95ypC6F4Q_mh6_BKFEr_2glLbPqVkRz-Nk-M3B1eJR3qXC-anF1dzB4y2y_YINvq5Swp0OBEtCeHHCz9Rg1LFVdskYunqRStFaa4t6Ii9GyXuN3p1-Urk1fxEq_uXdLZkpJ_ivQTRrFPDO2RcQypr8i5v1JoQmgOGXPVbMoVZx-3bBm69pfk0SWiAcMBTzxsOI6JWBRa5gScALY-y3ye97UD2D6nEeXBIdgQNHASauQF',
     // el token reemplaza con lo que tenemos en postman
     user_id: "312kigax2lkwdmyh4rabbqb6vjl4",
   };

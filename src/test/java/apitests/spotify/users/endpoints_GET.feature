@@ -9,5 +9,5 @@ Feature: Contiene los tests que hacen llamado a los endpoints de tipo GET para s
     Given url baseUrl
     And path 'me'
     When method get
-    Then status 200
+    Then status 200 
 
