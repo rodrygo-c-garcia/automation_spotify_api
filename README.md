@@ -99,6 +99,49 @@ Para ejecutar las pruebas, utiliza el siguiente comando:
 mvn test
 ```
 
+## 🔑 Configuración del Token de Spotify
+
+**⚠️ IMPORTANTE**: Antes de ejecutar las pruebas, debes configurar un token válido de Spotify.
+
+### Pasos para actualizar el token:
+
+1. **Abrir Postman** con la colección de _Proyecto Final Modulo 4 - Pruebas de API_
+2. **Ir a la pestaña Authorization** de la colección
+3. **Hacer clic en "Refresh Token"** para obtener un nuevo token válido
+4. **Copiar el nuevo token** generado
+5. **Abrir el archivo** `src/test/java/karate-config.js` en tu editor
+6. **Reemplazar el valor actual** del token con el nuevo valor:
+
+```javascript
+// En karate-config.js
+function fn() {
+  var config = {
+    baseUrl: "https://api.spotify.com/v1",
+    token: "TU_NUEVO_TOKEN_AQUI", // ← Reemplazar aquí
+  };
+  return config;
+}
+```
+
+7. **Guardar el archivo** y ejecutar las pruebas:
+
+```bash
+mvn test
+```
+
+### Notas importantes sobre el token:
+
+- 🕐 **Expiración**: Los tokens de Spotify expiran en aproximadamente 1 hora
+- 🔄 **Renovación**: Debes refrescar el token antes de cada ejecución de pruebas
+
+### Troubleshooting:
+
+Si obtienes errores **401 Unauthorized**:
+
+1. Verifica que el token esté actualizado
+2. Confirma que tiene los scopes necesarios
+3. Asegúrate de que no haya espacios extra al copiar/pegar
+
 ## Reportes de ejecución
 
 Después de ejecutar las pruebas, se generan automáticamente reportes en dos formatos:
