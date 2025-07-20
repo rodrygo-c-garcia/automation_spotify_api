@@ -1,11 +1,11 @@
-Feature: Contiene los tests que hacen llamado a los endpoints de tipo GET para spotify
+Feature: Contiene el test que hace un llamado al endpoint de Albums con el metodo de tipo GET para spotify
 
   Background:
     * header Authorization = 'Bearer ' + token
     * def albumId = '17ScNnJ0lSWajodZaRpHdQ'
 
   @album_contains_GET
-  Scenario: Verificar si el álbum está en favoritos del usuario
+  Scenario: Verificar si el álbum está en la biblioteca de favoritos del usuario
     Given url baseUrl
     And path 'me', 'albums', 'contains'
     And param ids = albumId

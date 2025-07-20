@@ -1,4 +1,4 @@
-Feature: Obtener tracks sin proporcionar IDs (caso negativo)
+Feature: Contiene el test que hace un llamado al endpoint de Tracks con el metodo de tipo GET para spotify
 
   Background:
     * header Authorization = 'Bearer ' + token

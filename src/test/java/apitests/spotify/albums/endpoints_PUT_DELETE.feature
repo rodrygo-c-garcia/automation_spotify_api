@@ -1,4 +1,4 @@
-Feature: Contiene los tests que hacen llamado a los endpoints de tipo GET para spotify
+Feature: Contiene los tests que hacen llamado al endpoint de Albums con los metodos de tipo PUT y DELETE para spotify
 
   Background:
     * header Authorization = 'Bearer ' + token
