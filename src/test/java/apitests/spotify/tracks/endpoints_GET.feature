@@ -1,4 +1,4 @@
-Feature: Contiene los tests que hacen llamado a los endpoints de tipo GET para spotify
+Feature: Contiene los tests que hacen llamado al endpoint de Tracks con el metodo de tipo GET para spotify
 
   Background:
     * header Authorization = 'Bearer ' + token
