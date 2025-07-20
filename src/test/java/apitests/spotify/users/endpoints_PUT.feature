@@ -26,6 +26,15 @@ Feature: Contiene los tests que hacen llamado a los endpoints de tipo PUT para s
     Then status 200
     And match response[0] == true
 
+    # Validación adicional: Dejar de seguir el playlist
+    * header Authorization = 'Bearer ' + token
+    Given url baseUrl
+    And path 'playlists/' + playlistId + '/followers'
+    When method delete
+    Then status 200
+    # Verificar que no hay contenido en la respuesta
+    And match response == ''
+
   @follow_playlist_PUT_private
   Scenario: Seguir un playlist como privado
     Given url baseUrl
@@ -46,6 +55,15 @@ Feature: Contiene los tests que hacen llamado a los endpoints de tipo PUT para s
     Then status 200
     And match response[0] == true
 
+    # Validación adicional: Dejar de seguir el playlist
+    * header Authorization = 'Bearer ' + token
+    Given url baseUrl
+    And path 'playlists/' + playlistId + '/followers'
+    When method delete
+    Then status 200
+    # Verificar que no hay contenido en la respuesta
+    And match response == ''
+
   @follow_playlist_PUT_default
   Scenario: Seguir un playlist sin especificar public (default true)
     Given url baseUrl
@@ -65,6 +83,15 @@ Feature: Contiene los tests que hacen llamado a los endpoints de tipo PUT para s
     When method get
     Then status 200
     And match response[0] == true
+
+    # Validación adicional: Dejar de seguir el playlist
+    * header Authorization = 'Bearer ' + token
+    Given url baseUrl
+    And path 'playlists/' + playlistId + '/followers'
+    When method delete
+    Then status 200
+    # Verificar que no hay contenido en la respuesta
+    And match response == ''
 
   @follow_playlist_PUT_no_body
   Scenario: Seguir un playlist sin body (debería usar default public=true)
