@@ -31,9 +31,11 @@ src/
 │   └── java/
 │       └── apitests/
 │           └── spotify/
-│               ├── endpoints/     # Pruebas generales de endpoints
-│               ├── playlists/     # Pruebas específicas de playlists
-│               └── users/         # Pruebas específicas de usuarios
+│               ├── users/         # Pruebas de endpoints de usuarios
+│               │   ├── endpoints_GET.feature    # Tests GET para información de usuario
+│               │   └── endpoints_PUT.feature    # Tests PUT para follow/unfollow playlists
+│               └── utils/         # Funciones de utilidad y validaciones
+│                   └── validators.js            # Validaciones reutilizables (email, URIs, etc.)
 target/
 ├── cucumber-html-reports/         # Reportes en formato HTML
 └── karate-reports/               # Reportes específicos de Karate
@@ -124,6 +126,7 @@ Este proyecto incluye casos de prueba para los siguientes endpoints de Spotify:
 - **Endpoints generales**: Verificación de conectividad y respuestas básicas
 - **Playlists**: Operaciones CRUD en playlists (crear, leer, actualizar, eliminar)
 - **Usuarios**: Gestión de información de usuarios y perfiles
+- ...
 
 ## Notas adicionales
 
